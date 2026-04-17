@@ -32,14 +32,20 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       },
     }),
   ],
-  callbacks: {
-    jwt({ token, user }) {
-      if (user) token.role = (user as any).role;
-      return token;
-    },
-    session({ session, token }) {
-      if (session.user) (session.user as any).role = token.role;
-      return session;
-    },
+callbacks: {
+  async jwt({ token, user }) {
+    if (user) {
+      token.id = user.id; // Add the database ID to the token
+      token.role = (user as any).role;
+    }
+    return token;
   },
+  async session({ session, token }) {
+    if (session.user) {
+      (session.user as any).id = token.id; // Pass ID from token to session
+      (session.user as any).role = token.role;
+    }
+    return session;
+  },
+},
 });
