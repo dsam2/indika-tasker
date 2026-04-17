@@ -36,7 +36,7 @@ export default function LoginPage() {
         <h1 className="text-5xl font-black mb-8 uppercase italic tracking-tighter leading-none">
           Login <br />
           <span className="bg-pink-500 text-white px-3 border-2 border-black not-italic text-3xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-            Indika
+            Nexus
           </span>
         </h1>
         

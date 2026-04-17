@@ -23,7 +23,7 @@ export default async function SettingsPage() {
             name="username"
             defaultValue={user?.username || ""}
             className="w-full border-4 border-black p-3 font-bold focus:bg-yellow-200 outline-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
-            placeholder="e.g. ShadowWalker"
+            placeholder="e.g. nexa"
           />
         </div>
 

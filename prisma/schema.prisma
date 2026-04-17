@@ -22,6 +22,7 @@ model Task {
   title       String
   userId      String
   completed   Boolean   @default(false)
+  priority  String   @default("MISSION")
   createdAt   DateTime  @default(now())
   description String?
   dueDate     DateTime?

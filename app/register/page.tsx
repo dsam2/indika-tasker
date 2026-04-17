@@ -46,7 +46,7 @@ export default function RegisterPage() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="w-full border-4 border-black p-4 font-bold text-black placeholder:text-gray-500 focus:bg-cyan-100 outline-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
-            placeholder="dev@indika.ai"
+            placeholder="dev@nexus.gg"
             required
           />
         </div>
